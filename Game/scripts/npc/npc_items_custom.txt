@@ -1,0 +1,62 @@
+"DOTAAbilities"
+{
+  "item_rubicks_orb"
+  {
+    "ID" "69420"
+
+    "AbilityBehavior"        "DOTA_ABILITY_BEHAVIOR_PASSIVE"
+    "BaseClass" "item_datadriven"
+    "AbilityTextureName" "item_rubicks_orb"
+
+
+    "ItemCost" "2500"
+    "ItemShopTags" "resistance"
+    "ItemQuality" "component"
+
+    "MaxUpgradeLevel" "5"
+    "ItemBaseLevel" "1"
+
+    "AbilitySpecial"
+    {
+      "01"
+      {
+        "var_type"  "FIELD_INTEGER"
+        "bonus_armor" "4"
+      }
+      "02"
+
+      {
+        "var_type" "FIELD_INTEGER"
+        "bonus_hp" "200"
+      }
+      "03"
+      {
+        "var_type" "FIELD_INTEGER"
+        "hp_per_tick" "8"
+      }
+      "04"
+      {
+        "var_type" "FIELD_FLOAT"
+        "tick_rate" "1.0"
+      }
+    }
+
+    "Modifiers"
+    {
+      "modifier_item_rubicks_orb"
+      {
+        "Passive"      "1"
+        "IsDebuff"      "0"
+      
+        "EffectName"    "particles/items_fx/healing_clarity.vpcf"
+        "EffectAttachType"  "follow_origin"
+      
+        "Properties"
+        {
+          "MODIFIER_PROPERTY_PHYSICAL_ARMOR_BONUS" "%bonus_armor"
+            "MODIFIER_PROPERTY_HEALTH_BONUS" "%bonus_hp" 
+        }
+      }
+    }
+  }
+}
